@@ -12,7 +12,7 @@ const totalClients = async (req, res = response) => {
       "SELECT COUNT(Fullname) as total_clients FROM Customers;"
     );
     res.json({ total_clients: customers[0].total_clients });
-  } catch (err) {
+  } catch (error) {
     console.log(error);
     res.status(500).json({
       ok: false,

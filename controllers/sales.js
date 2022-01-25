@@ -13,7 +13,7 @@ const totalSales = async (req, res = response) => {
     );
 
     res.json({ total_sales: sales[0].total_sales });
-  } catch (err) {
+  } catch (error) {
     console.log(error);
     res.status(500).json({
       ok: false,
@@ -29,7 +29,7 @@ const lastweekSales = async (req, res = response) => {
       "SELECT * FROM Sales WHERE STR_TO_DATE(Date, '%d/%m/%Y') BETWEEN STR_TO_DATE('21/12/2015', '%d/%m/%Y') AND STR_TO_DATE('31/12/2015', '%d/%m/%Y');"
     );
     res.json({ lastweek_sales: sales });
-  } catch (err) {
+  } catch (error) {
     console.log(error);
     res.status(500).json({
       ok: false,
@@ -45,7 +45,7 @@ const lastmonthSales = async (req, res = response) => {
       "SELECT * FROM Sales WHERE STR_TO_DATE(Date, '%d/%m/%Y') BETWEEN STR_TO_DATE('01/12/2015', '%d/%m/%Y') AND STR_TO_DATE('31/12/2015', '%d/%m/%Y');"
     );
     res.json({ lastmonth_sales: sales });
-  } catch (err) {
+  } catch (error) {
     console.log(error);
     res.status(500).json({
       ok: false,
@@ -61,7 +61,7 @@ const stateSales = async (req, res = response) => {
       "SELECT State, COUNT(Row_ID) as quantity FROM Sales WHERE STR_TO_DATE(Date, '%d/%m/%Y') BETWEEN STR_TO_DATE('01/01/2012', '%d/%m/%Y') AND STR_TO_DATE('31/12/2015', '%d/%m/%Y') GROUP BY State;"
     );
     res.json({ states_sales: sales });
-  } catch (err) {
+  } catch (error) {
     console.log(error);
     res.status(500).json({
       ok: false,
@@ -78,7 +78,7 @@ const regionSales = async (req, res = response) => {
     );
 
     res.json({ region_sales: sales });
-  } catch (err) {
+  } catch (error) {
     console.log(error);
     res.status(500).json({
       ok: false,
@@ -95,7 +95,7 @@ const segmentSales = async (req, res = response) => {
     );
 
     res.json({ segment_sales: sales });
-  } catch (err) {
+  } catch (error) {
     console.log(error);
     res.status(500).json({
       ok: false,
@@ -112,7 +112,7 @@ const hotSalesProducts = async (req, res = response) => {
     );
 
     res.json({ hotsale: sales });
-  } catch (err) {
+  } catch (error) {
     console.log(error);
     res.status(500).json({
       ok: false,
