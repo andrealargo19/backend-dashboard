@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js",
-    "start": "node index.js"
+    "start": "node ."
   },
   "author": "c2-62-t-NoCountry",
   "license": "ISC",
@@ -21,6 +19,11 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+  },
+  "dependencies": {
+    "body-parser": "1.19.1",
+    "mysql":"2.18.1",
+    "express": "4.17.2",
   }
 }
