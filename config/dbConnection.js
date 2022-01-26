@@ -7,7 +7,7 @@ module.exports = async () => {
     // password: '1d2c5681',
     // database: 'heroku_d2458b5b17a2bd6',
     host: 'ec2-18-119-134-227.us-east-2.compute.amazonaws.com',
-    user: 'dashboard-user-node',
+    user: 'dashboard-user-heroku',
     password: 'dashboarD_2022',
     database: 'dashboard',
   });
